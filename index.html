@@ -430,6 +430,27 @@
             transition: all 0.8s ease;
         }
 
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
@@ -515,24 +536,11 @@
                         <ul style="margin-top: 1rem; padding-right: 1rem;">
                             <li>تخصص في تطوير تطبيقات الويب الحديثة</li>
                             <li>مشاريع تخرج بتقييم ممتاز</li>
-                            <li>دراسة متعمقة في هياكل البيانات والخوارزميات</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-content">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">مطور ويب مستقل</h3>
-                        <p style="color: var(--accent); font-weight: 500;">2022 - الحاضر</p>
-                        <ul style="margin-top: 1rem; padding-right: 1rem;">
-                            <li>تصميم وتطوير مواقع وتطبيقات ويب متكاملة</li>
-                            <li>تحسين أداء المواقع بنسبة تصل إلى 60%</li>
-                            <li>العمل مع عملاء من مختلف القطاعات</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-content">
                         <h3 style="color: var(--primary); margin-bottom: 0.5rem;">دبلوم برمجة الحاسب</h3>
                         <p style="color: var(--accent); font-weight: 500;">كلية الدوادمي التقنية | 2020 - 2022</p>
@@ -540,6 +548,18 @@
                             <li>أساسيات البرمجة وهياكل البيانات</li>
                             <li>تطوير تطبيقات سطح المكتب</li>
                             <li>أساسيات قواعد البيانات</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">مطور ويب مستقل</h3>
+                        <p style="color: var(--accent); font-weight: 500;">2022 - الحاضر</p>
+                        <ul style="margin-top: 1rem; padding-right: 1rem;">
+                            <li>تصميم وتطوير مواقع وتطبيقات ويب متكاملة</li>
+                            <li>تحسين أداء المواقع بنسبة تصل إلى 60%</li>
+                            <li>العمل مع عملاء من مختلف القطاعات</li>
                         </ul>
                     </div>
                 </div>
@@ -565,13 +585,13 @@
                             <div class="skill-icon">
                                 <i class="fab fa-css3-alt"></i>
                             </div>
-                            <span>CSS3 & Sass</span>
+                            <span>CSS3<span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fab fa-js"></i>
                             </div>
-                            <span>JavaScript (ES6+)</span>
+                            <span>JavaScript</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -591,12 +611,7 @@
                             </div>
                             <span>Node.js</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <span>MongoDB</span>
-                        </div>
+                      
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-database"></i>
@@ -621,12 +636,7 @@
                             </div>
                             <span>Git & GitHub</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-fire"></i>
-                            </div>
-                            <span>Webpack</span>
-                        </div>
+                      
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-mobile-alt"></i>
@@ -651,7 +661,6 @@
             <h2 class="section-title" data-aos="fade-right">أعمالي ومشاريعي</h2>
             <div class="projects-grid">
                 <div class="project-card" data-aos="fade-up">
-                    <img src="project1.jpg" alt="مشروع نظام تسجيل الدخول" class="project-img">
                     <div class="project-content">
                         <h3 style="color: var(--primary);">نظام تسجيل دخول متكامل</h3>
                         <p>نظام تسجيل دخول وإنشاء حساب مع التحقق من البيانات في الوقت الحقيقي</p>
@@ -672,7 +681,6 @@
                 </div>
                 
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="project2.jpg" alt="مشروع البطاقة التفاعلية" class="project-img">
                     <div class="project-content">
                         <h3 style="color: var(--primary);">بطاقة شخصية تفاعلية</h3>
                         <p>تصميم بطاقة شخصية متجاوبة مع تأثيرات حركية وتحريك سلس</p>
@@ -686,27 +694,6 @@
                                 عرض المشروع
                             </a>
                             <a href="https://github.com/YD511/MyCard" class="project-link project-link-secondary" target="_blank">
-                                الكود المصدري
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="project3.jpg" alt="مشروع إدارة المهام" class="project-img">
-                    <div class="project-content">
-                        <h3 style="color: var(--primary);">نظام إدارة المهام</h3>
-                        <p>تطبيق ويب لإدارة المهام اليومية مع إمكانية التصنيف والبحث</p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link project-link-primary" target="_blank">
-                                عرض المشروع
-                            </a>
-                            <a href="#" class="project-link project-link-secondary" target="_blank">
                                 الكود المصدري
                             </a>
                         </div>
@@ -769,29 +756,33 @@
                     </a>
                 </div>
                 
-                <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-form" data-aos="fade-up" data-aos-delay="100" >
                     <h3 style="color: var(--primary); margin-bottom: 1.5rem;">أرسل لي رسالة</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="اسمك الكريم" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="بريدك الإلكتروني" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="الموضوع">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="رسالتك" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            <i class="fas fa-paper-plane mr-2"></i> إرسال الرسالة
-                        </button>
-                    </form>
+                    <form id="contactForm">
+                      <div class="form-group">
+                          <input type="text" class="form-control" id="name" name="name" placeholder="اسمك الكريم" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="email" class="form-control" id="email" name="email" placeholder="بريدك الإلكتروني" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="text" class="form-control" id="subject" name="subject" placeholder="الموضوع">
+                      </div>
+                      <div class="form-group">
+                          <textarea class="form-control" id="message" name="message" placeholder="رسالتك" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary" style="width: 100%;">
+                          <i class="fas fa-paper-plane mr-2"></i> إرسال الرسالة
+                      </button>
+                  </form>
+                  
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">تم إرسال رسالتك بنجاح!</div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -816,16 +807,66 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Initialize AOS animation library
-        AOS.init({
-            duration: 800,
-            once: true,
-            easing: 'ease-in-out'
-        });
-        
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
+      // Initialize AOS animation library
+      AOS.init({
+          duration: 800,
+          once: true,
+          easing: 'ease-in-out'
+      });
+    
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    
+      const form = document.getElementById('contactForm');
+      const toast = document.getElementById('toast');
+    
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+    
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => data[key] = value);
+    
+        try {
+          const response = await fetch("https://formspree.io/f/mldjobvr", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+          });
+    
+          // لو لم تكن الاستجابة ناجحة
+          if (!response.ok) {
+            const errorText = await response.text(); // للحصول على تفاصيل الخطأ
+            console.error("Error response:", errorText); // عرض رسالة الخطأ في الـ console
+            toast.textContent = "حدث خطأ أثناء الإرسال ❌";
+            toast.style.background = '#ef4444'; // أحمر
+            toast.classList.add('show');
+          } else {
+            // Success notification
+            toast.textContent = "تم إرسال الرسالة بنجاح ✅";
+            toast.style.background = '#2563eb'; // أزرق
+            toast.classList.add('show');
+            form.reset();
+          }
+        } catch (error) {
+          // خطأ في الاتصال
+          console.error("Network error:", error);
+          toast.textContent = "فشل الاتصال بالخادم ❌";
+          toast.style.background = '#ef4444'; // أحمر
+          toast.classList.add('show');
+        }
+    
+        // إزالة التوست بعد 5 ثواني
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 5000);
+      });
     </script>
+    
+  
 </body>
 </html>
